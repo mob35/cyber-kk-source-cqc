@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{17190700-EDF8-4500-813A-75A05846C58B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>COC.Resource</RootNamespace>
+    <AssemblyName>COC.Resource</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="COCConstant.cs" />
+    <Compile Include="Data\CampaignMasterData.cs" />
+    <Compile Include="Data\CampaignWSData.cs" />
+    <Compile Include="Data\ControlListData.cs" />
+    <Compile Include="Data\EmailTemplateData.cs" />
+    <Compile Include="Data\ExistingProductData.cs" />
+    <Compile Include="Data\FlowLogData.cs" />
+    <Compile Include="Data\LeadData.cs" />
+    <Compile Include="Data\LoginUserData.cs" />
+    <Compile Include="Data\MonitoringWSData.cs" />
+    <Compile Include="Data\NoteHistoryData.cs" />
+    <Compile Include="Data\OwnerDelegateEmailData.cs" />
+    <Compile Include="Data\OwnerLoggingData.cs" />
+    <Compile Include="Data\PhoneCallHistoryData.cs" />
+    <Compile Include="Data\RankingData.cs" />
+    <Compile Include="Data\ScreenPrivilegeData.cs" />
+    <Compile Include="Data\SearchLeadCondition.cs" />
+    <Compile Include="Data\SearchLeadData.cs" />
+    <Compile Include="Data\StaffData.cs" />
+    <Compile Include="Data\UserMonitoringData.cs" />
+    <Compile Include="Data\UserRoleMatrixData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

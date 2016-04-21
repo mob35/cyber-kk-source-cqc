@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3CB55873-2A5F-4BF5-93C9-D7CAD21EE466}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>COC.Dal</RootNamespace>
+    <AssemblyName>COC.Dal</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SLMDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SLMDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\KKCocMsAolDal.cs" />
+    <Compile Include="Tables\KKCocMsTeamDal.cs" />
+    <Compile Include="Tables\KKCocMsWSDal.cs" />
+    <Compile Include="Tables\KKCocTrFlowLogDal.cs" />
+    <Compile Include="Tables\KKCocTrLoginLogDal.cs" />
+    <Compile Include="Tables\KKCocTrRankingModel.cs" />
+    <Compile Include="Tables\KKCocTrSessionDal.cs" />
+    <Compile Include="Tables\KKCocTrSnapMonitoringDetailDal.cs" />
+    <Compile Include="Tables\KKCocTrSnapWaitAppDetailDal.cs" />
+    <Compile Include="Tables\KKCocWsLogDal.cs" />
+    <Compile Include="Tables\KKSlmMsBranchDal.cs" />
+    <Compile Include="Tables\KKSlmMsCampaignDal.cs" />
+    <Compile Include="Tables\KKSlmMsCampaignMasterDal.cs" />
+    <Compile Include="Tables\KKSlmMsChannelDal.cs" />
+    <Compile Include="Tables\KKSlmMsdepartmentDal.cs" />
+    <Compile Include="Tables\KKSlmMsOptionDal.cs" />
+    <Compile Include="Tables\KKSlmMsPositionDal.cs" />
+    <Compile Include="Tables\KKSlmMsStaffDal.cs" />
+    <Compile Include="Tables\KKSlmMsStaffTypeDal.cs" />
+    <Compile Include="Tables\KKSlmMsValidateDal.cs" />
+    <Compile Include="Tables\KKSlmNoteDal.cs" />
+    <Compile Include="Tables\KKSlmScreenDAL.cs" />
+    <Compile Include="Tables\KKSlmTrLeadDal.cs" />
+    <Compile Include="Tables\ReportDal.cs" />
+    <Compile Include="Tables\SearchLeadDal.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="SLMDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SLMDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\COC.Resource\COC.Resource.csproj">
+      <Project>{17190700-EDF8-4500-813A-75A05846C58B}</Project>
+      <Name>COC.Resource</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
